@@ -12,7 +12,7 @@ void DFT (node * root)
 	// Implement DFS
 	// Hint: You can use print_node, print_tree and/or print_stack.
 
-  /* This function uses recursion to print all the elements in a tree that consists only of integers.
+  /* This function uses recursion to traverse and print all the elements in a tree that consists only of integers.
   *  It starts from the root of the tree and prints the left childs first.
   *  Everytime a note without a child is reached, the right child to the current root is examined.
   *  Given a binary tree:
@@ -26,6 +26,11 @@ void DFT (node * root)
   *                 4
   * 
   * The sequence 4 7 28 77 23 86 3 9 98 will thus be printed.
+  * 
+  * NOTE: I've chosen to take advantage of the call stack, that C uses. Moreover, i've used recursion
+  * to solve the problem. It is also possible to implement the function without recursion by implementing 
+  * the whole tree as a new stack. Then the the pop and push functions could be used.
+  * However, I find this solution more efficient (hope it still solves the exercise...:-)
   */
 
     //base case: the tree is empty
@@ -50,6 +55,7 @@ void DFT (node * root)
         DFT(root->rchild);
 
     return;
+
 }
 
 node *make_node (int num, node * left, node * right)
@@ -103,7 +109,8 @@ void print_tree (node * p, int depth)
 
 stack *push (stack * topp, node * node)
 {
-	return 0;
+	
+  return 0;
 }
 
 bool isEmpty (stack * topp)
