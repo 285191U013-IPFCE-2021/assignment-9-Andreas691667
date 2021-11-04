@@ -29,7 +29,7 @@ void DFT (node * root)
   * 
   * NOTE: I've chosen to take advantage of the call stack, that C uses. Moreover, i've used recursion
   * to solve the problem. It is also possible to implement the function without recursion by implementing 
-  * the whole tree as a new stack. Then the the pop and push functions could be used.
+  * the whole tree as a new stack. Then the the pop and push functions could be used to make a stack of nodes.
   * However, I find this solution more efficient (hope it still solves the exercise...:-)
   */
 
